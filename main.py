@@ -1,41 +1,50 @@
 # Do not modify these lines
-__winc_id__ = '71dd124b4a6e4d268f5973db521394ee'
-__human_name__ = 'strings'
+__winc_id__ = '7b9401ad7f544be2a23321292dd61cb6'
+__human_name__ = 'arguments'
 
 # Add your code after this line
-#Part 1
-
-#1
-player1 = 'Ruud Gullit'
-player2 = 'Marco van Basten'
-
-#2
-goal_0 = 32
-goal_1 = 54
-
-#3
-scorers = f"{player1} {goal_0}, {player2} {goal_1}"
-
-#4
-report = f"{player1} scored in the {goal_0}nd minute\n{player2} scored in the {goal_1}th minute"
 
 
-#Part2
+#PART 1 GREET TEMPLATE
+def greet(name, greeting="Hello, <name>!"):
+    if "<name>" in greeting:                                              # Toch stiekem de <name> handling erin geprogrammeerd, gewoon omdat het kan. Give it a go op lijn 15-17
+        return greeting.replace("<name>", name)                     
+    else:
+        return(f"{greeting}, {name}!")
 
-#1
-player = "Ronald Koeman"
+#print(greet("Chris"))
+#print(greet("Chris", "What is up"))
+#print(greet("Chris", "How is it hanging, <name>!"))             
 
-#2
-first_name = player[:(player.find(" "))]
 
-#3
-last_name_len = len(player[(player.find(" ")):])-1
+#PART 2 FORCE
+bodies = {
+    "sun"     : 274.0,
+    "jupiter" :  24.9,
+    "neptune" :  11.2,
+    "saturn"  :  10.4,
+    "earth"   :   9.8,
+    "uranus"  :   8.9,
+    "venus"   :   8.9,
+    "mars"    :   3.7,
+    "mercury" :   3.7,
+    "moon"    :   1.6,
+    "pluto"   :   0.6
+}
 
-#4
-name_short = player[0] + ". " + player[(player.find("K")):]
+def force(mass, body="earth"):
+    return mass * bodies[body]
 
-#5
-chant = (first_name + "! ") * (len(first_name)-1) + first_name + "!"
+#print(force(2,"uranus"))
 
-#6
-good_chant = (chant[len(chant)-1] != " ")
+
+#PART 3 
+def pull(m1, m2, d):
+    return 6.674*10**-11 * ((m1 * m2) / d**2)
+
+print(pull(800,1500,3)) #Dit was het voorbeeld van de 2 auto's op de website.
+
+
+
+
+
