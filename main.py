@@ -12,9 +12,9 @@ def greet(name, greeting="Hello, <name>!"):
     return(f"{greeting}, {name}!")
 
 
-#print(greet("Chris"))
-#print(greet("Chris", "What is up"))
-#print(greet("Chris", "How is it hanging, <name>!"))             
+#print(greet("Christiaan"))
+#print(greet("Christiaan", "What is up"))
+#print(greet("Christiaan", "How is it hanging, <name>!"))             
 
 
 #PART 2 FORCE
