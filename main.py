@@ -41,7 +41,7 @@ def force(mass, body="earth"):
 def pull(m1, m2, d):
     return 6.674*10**-11 * ((m1 * m2) / d**2)
 
-#print(pull(800,1500,3)) #Dit was het voorbeeld van de 2 auto's op de website.
+#print(pull(800,1500,3))                                                #Dit was het voorbeeld van de 2 auto's op de website.
 
 
 
