@@ -9,8 +9,7 @@ __human_name__ = 'arguments'
 def greet(name, greeting="Hello, <name>!"):
     if "<name>" in greeting:                                              # Toch stiekem de <name> handling erin geprogrammeerd, gewoon omdat het kan. Give it a go op lijn 15-17
         return greeting.replace("<name>", name)                     
-    else:
-        return(f"{greeting}, {name}!")
+    return(f"{greeting}, {name}!")
 
 #print(greet("Chris"))
 #print(greet("Chris", "What is up"))
